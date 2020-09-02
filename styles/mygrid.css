@@ -5,7 +5,8 @@
     display:grid;
     grid-template-columns: 100px 1fr 100px 100px 100px;
     grid-template-rows: 70px 50px 1fr 50px;
-    outline: 5px;
+    
+    outline: 5px solid white;
     background: rgb(8, 97, 97);
     border: 2px solid rgb(183, 214, 9);
     border-radius: 5px;
@@ -14,5 +15,9 @@
     grid-column: 1/6;
 }
 .nav-container {
+    grid-column: 1/6;
+    grid-row: 3/5;
+}
+.footer-container {
     grid-column: 1/6;
 }

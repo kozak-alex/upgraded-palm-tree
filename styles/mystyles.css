@@ -3,14 +3,14 @@ body {
 }
 
 .background {
-    background: #077070;
-    margin: 5px;
-    padding: 5px 15px;
-    border: 5px groove #b7d609;
-    border-radius: 10px 10px 10px 10px;
+ /*   background: #077070;*/
+ /*   margin: 5px;
+    padding: 5px 15px;*/
+ /*   border: 5px groove #b7d609;*/
+  /*  border-radius: 10px 10px 10px 10px;*/
 }
 header {
-    color: yellow;
+    color: rgb(255, 51, 0);
     text-align: center;
 }
 img {
@@ -18,6 +18,6 @@ img {
     border-radius: 5px 5px 0px 5px;
 }
 footer {
-    color: yellow;
+    color: rgb(224, 114, 24);
     text-align: center;
 }
