@@ -1,0 +1,13 @@
+/*body {
+    background: rgb(8, 97, 97);   
+}*/
+#grid-container {
+    display:grid;
+}
+/*.background {
+    background: rgb(8, 97, 97);
+    margin: 5px;
+    padding: 5px 15px;
+    border: 2px solid rgb(183, 214, 9);
+    border-radius: 5px;
+}*/

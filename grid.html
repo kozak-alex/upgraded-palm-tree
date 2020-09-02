@@ -1,42 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
     <head>
         <meta charset="UTF-8">
         <title> My first site </title>
+        <!--<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1" />
+        -->
+        <meta name="viewport" content="width=700, height=device-height, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="styles/mystyles.css" type="text/css" />
+        <link rel="stylesheet" href="styles/mygrid.css" type="text/css" />
     </head>
-    
-
-    <body>
+     <body>
      <section id="grid-container">
-            <header id="head-container">
+            <header class="head-container background">
                 <h3>HEADER &reg;</h3>
             </header>
-            <nav class="nav-container">
-             <ul>
-                 <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a</li>
-                   <li><a href="contacts.html">Contacts</a</li>
+            <nav class="nav-container background">
+                <ul class="flex-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a</li>
+                    <li><a href="contacts.html">Contacts</a</li>
                 </ul>
             </nav>
-            <main class="main-container">
-                <div>
+            <main class="main-container background">
+                <div class="box">
                     <img src="images/123.jpg" alt="123" width="200" height="150">
                     <a href="page1.html">big foto</a>
                 </div>
-                <div>
+                <div class="box">
                     <img src="images/124.jpg" alt="124" width="200" height="150">
                     <a href="page2.html">big foto</a>
                 </div>
-
             </main>
-            <footer>
-                <p>&#169; by Aleksandr</p>
+            <footer class="footer-container background">
+                <p>&#169; by Aleksandr Kozachenko</p>
             </footer>        
      </section>
-     
-
-
-
-
-    </body>
+     </body>
 </html>
