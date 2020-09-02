@@ -1,0 +1,24 @@
+/*.nav-container {
+    display: flex;
+}*/
+.flex-menu {
+    display: flex;
+    flex-basis: content;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+ }
+
+.flex-menu .menu {
+    display: flex;
+    padding: 5px 10px;
+    align-items: center;
+    justify-content: center;
+    color: #11e959;
+}
+.flex-menu .menu a:hover {
+ /*   background: radial-gradient(#5fe9e4,#0c7e74);*/
+ color: white;
+ font: bold;
+}

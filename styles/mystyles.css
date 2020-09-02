@@ -1,23 +1,20 @@
-body {
-    background: #088080;   
-}
-
 .background {
- /*   background: #077070;*/
- /*   margin: 5px;
-    padding: 5px 15px;*/
- /*   border: 5px groove #b7d609;*/
-  /*  border-radius: 10px 10px 10px 10px;*/
+    background: #077070;
+    margin: 5px;
+ /*   padding: 5px 15px;*/
+    border: 2px solid #b7d609;
+    border-radius: 5px;
 }
-header {
-    color: rgb(255, 51, 0);
+header, footer {
+    color: #c9c508;
     text-align: center;
 }
 img {
+    margin: 5px;
     border: 1px solid #70dbdf;
-    border-radius: 5px 5px 0px 5px;
+    border-radius: 0px 20px 0px 20px;
 }
-footer {
-    color: rgb(224, 114, 24);
-    text-align: center;
+.menu a {
+    color:yellowgreen;
+    text-decoration: none;
 }

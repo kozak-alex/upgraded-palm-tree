@@ -1,0 +1,99 @@
+html
+	{
+	 overflow-y:  hidden;
+	}
+
+body 
+	{
+	 font: 14px 'Verdana';
+	 margin: 0;
+	 padding: 0;
+	 background: #008080;
+	 overflow-y:  hidden;
+	}
+ul 
+	{
+	 display: block;
+	 margin: 0% 0% 0% 20%;
+	 padding: 0;
+	 list-style: none;
+	}
+
+/*
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+
+*/
+
+ul.menu > li
+	{
+	 float: left;
+	 position: relative;
+	}
+ul.menu > li > a
+	{
+	 display: block;
+	 padding: 10px;
+	 color: white;
+	 background: url(menu11.png);		/* repeat-x;*/ 
+/*    background-color: red;  */
+	 text-decoration: none;
+	}
+ul.menu > li > a:hover
+	{
+	 background: url(menu21.png);		/* repeat-x;*/ /*	 background-color: black;*/
+	}
+ul.submenu
+	{
+	 display: none;
+	 position: absolute;
+	 width: auto;   /*120px;*/
+	 top: 37px;
+	 left: 0;
+	  background-color: white;
+	 border: 2px solid #009090;
+	 white-space: nowrap;
+	}
+ul.submenu > li
+	{
+	 display: block;
+	}
+ul.submenu > li > a
+	{
+	 display: block;
+	 padding: 10px;
+	 color: white;
+	 background-color:  #008080;	/* green; */
+	 text-decoration: none;
+	}
+ul.submenu > li > a:hover 
+	{
+	 text-decoration: none;				  /*text-decoration: underline;*/
+	 background: url(menu21.png);
+	}
+ul.menu > li:hover > ul.submenu
+	{
+	 display: block;
+	}
+
+
+img.shema
+	{
+	 margin: 0% 0% 0% 5%;
+	 width: 90%;
+	 opacity: 1;
+	}
+
+
+img.red
+	{
+	 position: absolute;		/*  relative;  fixed;  */
+	 width: 100px;	
+	 height: 100px;
+/*	 top: 200px;*/
+/*	 left: 400px;*/
+	}
