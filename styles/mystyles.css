@@ -34,3 +34,6 @@ img {
     padding: 15px;
 }
 
+div img a {
+    position: relative;
+}
