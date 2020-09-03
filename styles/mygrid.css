@@ -51,7 +51,7 @@
         min-width: 300px;
         margin: auto;
         grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 70px 70px 3fr 2fr 50px;
+        grid-template-rows: 70px 70px 3fr 1fr 50px;
      /*   outline: 5px solid rgb(214, 24, 173);
         background: rgb(12, 190, 36);*/
     }

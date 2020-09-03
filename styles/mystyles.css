@@ -1,10 +1,9 @@
 body {
  /* box-sizing: border-box;*/
-  background: crimson;
+  background: rgb(220, 226, 165);
 }
-
 .background {
-    background: #077070;
+    background: #008080;
     margin: 5px;
  /*   padding: 5px 15px;*/
     border: 2px solid #179af1;
@@ -18,10 +17,11 @@ img {
     margin: 5px;
     border: 1px solid #70dbdf;
     border-radius: 0px 20px 0px 20px;
-    box-shadow: 10px 5px 5px #06728d;
+    box-shadow: 10px 5px 5px #07313b;
 }
 .menu p {
     color:rgb(244, 248, 21);
+    font-size: 18px;
  /*   border: 1px solid black;   */   
 }
 .flex-menu .menu p{
@@ -31,9 +31,12 @@ img {
     padding-right: 20px;
 }
 .box {
+    border: 2px solid rgb(30, 177, 169);
+    border-radius: 0px 20px 0px 20px;
+    margin: 10px;
     padding: 15px;
 }
-
+/*
 div img a {
     position: relative;
 }
