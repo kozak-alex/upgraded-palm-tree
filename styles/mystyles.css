@@ -7,12 +7,12 @@ body {
     background: #077070;
     margin: 5px;
  /*   padding: 5px 15px;*/
-    border: 2px solid #f07934;
+    border: 2px solid #179af1;
     border-radius: 5px;
 }
 header, footer {
     color: #c9c508;
-    text-align: center;
+    margin-top: 50px;
 }
 img {
     margin: 5px;
@@ -21,5 +21,5 @@ img {
 }
 .menu p {
     color:yellowgreen;
-    border: 1px solid black;
+/*    border: 1px solid black;      */
 }
