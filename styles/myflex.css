@@ -13,15 +13,17 @@
 
 .flex-menu .menu {
     display: flex;
-    padding: 0px 10px;
+/*    padding: 0px 10px;*/
     align-items: center;
     justify-content: center;
-    color: #11e959;
+
 /*    border: 2px solid white;*/
 }
 .flex-menu .menu p:hover {
- /*   background: radial-gradient(#5fe9e4,#0c7e74);*/
+ background: radial-gradient(#5fe9e4,#0c7e74);
  cursor: pointer;
  color: white;
  font: bold;
+ border-radius: 10px;
 }
+

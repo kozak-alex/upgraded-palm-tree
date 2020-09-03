@@ -1,6 +1,6 @@
 body {
-  /*  width: 1000px;*/
-    background: crimson;
+ /* box-sizing: border-box;
+  background: crimson;*/
 }
 
 .background {
@@ -18,8 +18,19 @@ img {
     margin: 5px;
     border: 1px solid #70dbdf;
     border-radius: 0px 20px 0px 20px;
+    box-shadow: 10px 5px 5px #06728d;
 }
 .menu p {
-    color:yellowgreen;
-/*    border: 1px solid black;      */
+    color:rgb(244, 248, 21);
+ /*   border: 1px solid black;   */   
 }
+.flex-menu .menu p{
+    padding: 0px 10px;
+}
+.footer-container p{
+    padding-right: 20px;
+}
+.box {
+    padding: 15px;
+}
+
