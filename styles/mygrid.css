@@ -2,17 +2,17 @@
     background: rgb(8, 97, 97);   
 }*/
 #grid-container {
-    width: vw; 
-    height: vh; 
     display:grid;
+    max-width: 800px;
+    margin: auto;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 70px 70px 3fr 2fr 50px;
-    outline: 5px solid rgb(155, 217, 233);
-    background: rgb(8, 97, 97);
+    grid-template-rows: 60px 70px 3fr 2fr 50px;
+/*    outline: 5px solid rgb(155, 217, 233);*/
+    background: rgb(113, 245, 245);
 }
 .head-container {
     grid-column: 1/6;
-    grid-row: 1/2;   
+    grid-row: 1/2;  
 }
 .nav-container {
     grid-column: 1/6;

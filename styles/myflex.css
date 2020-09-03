@@ -3,22 +3,25 @@
 }*/
 .flex-menu {
     display: flex;
-    flex-basis: content;
-    align-items: center;
+    /*flex-basis: content;    ??????????????*/
     justify-content: center;
-    padding: 10px;
+    align-self: center;
+    padding: 0;
     margin: 0;
+/*    border: 1px solid red;*/
  }
 
 .flex-menu .menu {
     display: flex;
-    padding: 5px 10px;
+    padding: 0px 10px;
     align-items: center;
     justify-content: center;
     color: #11e959;
+/*    border: 2px solid white;*/
 }
-.flex-menu .menu a:hover {
+.flex-menu .menu p:hover {
  /*   background: radial-gradient(#5fe9e4,#0c7e74);*/
+ cursor: pointer;
  color: white;
  font: bold;
 }
