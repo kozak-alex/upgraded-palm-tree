@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title> My first site </title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="styles/mystyles.css" /> 
+       <link rel="stylesheet" href="styles/mygrid.css" />
+  <!--       <link rel="stylesheet" href="styles/myflex.css" /> -->
+    <style>
+        .subnav-container {
+            display: grid;
+            width: 50%;
+            height:70px ;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 50px 50px 50px 50px; /*1fr 1fr 1fr 1fr;*/
+            justify-items: center;
+            align-items:flex-start;
+        }
+        .mm1 {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            margin: 0px auto;
+            padding: 0px 30px;
+        }
+        .mm2 {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            margin: 0px auto;
+            padding: 0px 30px;
+        }
+        .mm3 {
+            grid-column: 3/4;
+            grid-row: 1/2;
+            margin: 0px auto;
+            padding: 0px 30px;
+        }
+        .sm11 {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            display:none;
+        }
+        .sm12 {
+            grid-column: 1/2;
+            grid-row: 3/4;
+            display:none;
+        }
+        .sm21 {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .sm22 {
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+        .sm23 {
+            grid-column: 2/3;
+            grid-row: 4/5;
+        }
+        .sm31 {
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+        .mm1:hover {
+            background: radial-gradient(#5fe9e4,#0c7e74);
+            cursor: pointer;
+            color: white;
+            font: bold;
+        }
+        .mm1:hover .sm11 {
+            display:block;
+        }
+
+    </style>
+
+    </head>
+     <body>
+     <section id="grid-container">
+            <header class="head-container background">
+                <h2>HEADER &trade;</h2>
+            </header>
+            <nav class="nav-container background">
+                <div class="subnav-container">
+                    <p class="mm1">Home</p>
+                    <p class="sm11">Link_1_1</p>
+                    <p class="sm12">Link_1_2</p>
+                    <p class="mm2">About us</p>
+                    <p class="sm21">Link_2_1</p>
+                    <p class="sm22">Link_2_2</p>
+                    <p class="sm23">Link_2_3</p>
+                    <p class="mm3">Contacts</p>                
+                    <p class="sm31">Link_3_1</p>
+                </div>
+             </nav>
+            <main class="main-container background"> 
+              <div class="box" background="black">
+                    <img src="images/123.jpg" alt="123" wight="200px" height="200px">
+                    <a href="page1.html">big foto</a>
+                </div>
+                <div class="box">
+                    <img src="images/123.jpg" alt="124" wight="200px" height="200px">
+                    <a href="page2.html">big foto</a>
+                </div>
+                <div class="box" background="black">
+                    <img src="images/123.jpg" alt="123" wight="200px" height="200px">
+                    <a href="page3.html">big foto</a>
+                </div>
+                <div class="box">
+                    <img src="images/123.jpg" alt="123" wight="200px" height="200px">
+                    <a href="page4.html">big foto</a>
+                </div>
+            </main>
+            <aside class="aside1-container background">
+                <p>a-side1</p>
+            </aside>
+            <aside class="aside2-container background">
+                <p>a-side2</p>
+            </aside>            
+            <footer class="footer-container background">
+                <p>&#169; by Aleksandr Kozachenko</p>
+            </footer>        
+     </section>
+     </body>
+</html>

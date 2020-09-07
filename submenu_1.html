@@ -5,9 +5,36 @@
         <title> My first site </title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1" />
         <link rel="stylesheet" href="styles/mystyles.css" /> 
-        <link rel="stylesheet" href="styles/mygrid.css" />
-        <link rel="stylesheet" href="styles/myflex.css" />   
-    
+ <!--       <link rel="stylesheet" href="styles/mygrid.css" />   -->
+        <link rel="stylesheet" href="styles/myflex.css" />
+    <style>
+        .submenu li {  
+           display: flex;
+           position: relative;
+	       float: left;
+           border: 1px solid red;
+                      }
+        .submenu > li > p {
+           display: block;
+           padding: 0px 10px 0px 10px;
+           margin: 0x;
+           }
+        .submenu {
+           /* display: none;*/
+           display: flex;
+	       position: relative; /*absolute;*/
+           width: auto;   /*120px;*/
+           top: 50px;
+           left: -50px;
+	       background-color: white;
+	       border: 2px solid #020a0a;
+           white-space: nowrap;
+           padding: 5px;
+           margin: 0px
+        }   
+	}
+    </style>
+
     </head>
      <body>
      <section id="grid-container">
@@ -17,6 +44,10 @@
             <nav class="nav-container background">
                 <ul class="flex-menu">
                     <li class="menu"><p>Home</p></li>
+                        <ul class="submenu">
+                            <li><p>Link1</p></li>
+                            <li><p>Link2</p></li>
+                        </ul>
                     <li class="menu"><p>About us</p></li>
                     <li class="menu"><p>Contacts</p></li>
                 </ul>
@@ -27,7 +58,7 @@
                     <a href="page1.html">big foto</a>
                 </div>
                 <div class="box">
-                    <img src="images/123.jpg" alt="123" wight="200px" height="200px">
+                    <img src="images/123.jpg" alt="124" wight="200px" height="200px">
                     <a href="page2.html">big foto</a>
                 </div>
                 <div class="box" background="black">
