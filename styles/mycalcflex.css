@@ -43,6 +43,7 @@
 }
 
 .result {
+    width: inherit;
     flex:1;
 }
 .number, .action1, .action2 {
@@ -50,15 +51,15 @@
 }
 .knob10 {
     flex:2;
-    flex-basis: 110px;
+ /*   flex-basis: 110px;*/
 }
 .knob11 {
     flex:1;
-    flex-basis: 58px;
+ /*   flex-basis: 58px;*/
 }
 .knob16 {
     flex:1;
-    flex-basis: 58px;
+ /*   flex-basis: 58px;*/
 }
 
 
