@@ -1,0 +1,121 @@
+#calc {
+    box-sizing: content-box;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch; 
+    max-width: 350px;
+    min-width: 250px;
+    height: 400px;
+}
+
+
+ .row2, .row3, .row4, .row5, .row6 {
+    display:flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: stretch; 
+    width: 100%;
+    height: 16%;
+    margin: 0;
+}
+.row1 {
+    display:flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-self: center; /*stretch;*/
+    width: 100%;
+    height: 20%;
+}
+
+
+.number, .action1, .action2 {
+    justify-content: stretch;
+    justify-items: center;
+    align-self: stretch;
+    font-size: 16pt;
+}
+
+.number, .action1, .action2 {
+    flex:1;
+}
+.knob10 {
+    flex:2;
+    flex-basis: 110px;
+}
+.knob11 {
+    flex:1;
+    flex-basis: 58px;
+}
+.knob16 {
+    flex:1;
+    flex-basis: 58px;
+}
+.result {
+    justify-content: stretch;
+    justify-items: center;
+    align-self: center;
+}
+
+/*
+
+.knob1 {
+    order: 14;
+}
+.knob2 {
+    order: 15;
+}
+.knob3 {
+    order: 16;
+}
+.knob4 {
+    order: 10;
+}
+.knob5 {
+    order: 11;
+}
+.knob6 {
+    order: 12;
+}
+.knob7 {
+    order: 6;
+}
+.knob8 {
+    order: 7;
+}
+.knob9 {
+    order: 8;
+}
+.knob10 {
+    order: 18;
+}
+.knob11 {
+    order: 19;
+}
+.knob12 {
+    order: 17;
+}
+.knob13 {
+    order: 13;
+}
+.knob14 {
+    order: 9;
+}
+.knob15 {
+    order: 5;
+}
+.knob16 {
+    order: 20;
+}
+.knob17 {
+    order: 2;
+}
+.knob18 {
+    order: 4;
+}
+.knob19 {
+    order: 3;
+}
+
+*/

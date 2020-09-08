@@ -66,3 +66,4 @@ calc.equal.addEventListener('click', function() {
 calc.clear.addEventListener('click', function() {
     calc.result.value = null;
 }, false)
+
