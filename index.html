@@ -4,17 +4,36 @@
         <meta charset="UTF-8">
         <title> My first site </title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1" />
-<!--
-            <link rel="stylesheet" href="styles/mystyles.css" /> 
-        <link rel="stylesheet" href="styles/mygrid.css" />
-        <link rel="stylesheet" href="styles/myflex.css" />  
---> 
+        <style>
+            div {
+                display: block;
+                width: 300px;
+                height: 400px; 
+                margin: auto;
+                border: 3px solid #14635f;
+                background:#20b2aa;
+                border-radius: 20px 20px 0px 20px;
+            }
+            a {
+                display: block;
+                float: left;
+                margin: 65px 80px;
+                text-align: center;
+                font-size: 30px;
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                text-shadow: 1px 1px 2px black, 0px 0px 20px red;             
+            }
+        </style>
     
     </head>
      <body>
-        <a href="https://kozak-alex.github.io/upgraded-palm-tree/calc-grid.html">Calculator Grid</a>
-        <br>
-        <br>
-        <a href="https:///kozak-alex.github.io/upgraded-palm-tree/calc-flex.html">Calculator Flex</a>
+        <div>
+            <a href="https://kozak-alex.github.io/upgraded-palm-tree/calc-grid.html">Calculator Grid</a>
+            <br>
+            <a href="https:///kozak-alex.github.io/upgraded-palm-tree/calc-flex.html">Calculator Flex</a>
+         </div>
      </body>
 </html>
