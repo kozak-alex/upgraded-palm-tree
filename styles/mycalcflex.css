@@ -30,7 +30,7 @@
     justify-items: center;
     align-self: stretch;
     font-size: 16pt;
-   /* border:1px solid yellow;*/
+    border:1px solid yellow;
 
    /* outline: none;*/
  
@@ -51,15 +51,19 @@
 }
 .knob10 {
     flex:2;
- /*   flex-basis: 110px;*/
+    flex-basis: 96px;
+    /* Расчитывается под минимальную ширину с учетом margin
+      2  46  4  46  4  46  4  46  2
+      2      96     4  46  4  46  2
+      При увеличении будет добавляться пропорционально   */
 }
 .knob11 {
     flex:1;
- /*   flex-basis: 58px;*/
+    flex-basis: 46px;
 }
 .knob16 {
     flex:1;
- /*   flex-basis: 58px;*/
+    flex-basis: 46px;
 }
 
 
