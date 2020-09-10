@@ -1,0 +1,41 @@
+
+#calc {
+    margin: auto;
+    padding: 5px;
+    background: gray;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.result {
+    padding: 10px;
+    font-size: 20pt;
+    text-align: end;
+    background: #3506a3;
+    color: chartreuse;
+}
+
+input {
+    border-radius: 5px; 
+    margin: 2px; 
+}
+
+.number {
+    background: rgb(26, 171, 182);
+}
+
+.action1 {
+    background: rgb(5, 105, 97);
+    color: chartreuse;
+}
+.action2 {
+    background: rgb(39, 114, 108);
+    color: darkgray;
+}
+.number:hover, .action1:hover, .action2:hover {
+    cursor: pointer;
+}
+
+.knob17{
+    color: red;
+}
