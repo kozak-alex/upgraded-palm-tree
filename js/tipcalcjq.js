@@ -1,23 +1,30 @@
-
+/*
+$(document).ready(function(){
+});
+*/
+$(function () {
+   alert('welcom');
+});
+/*
 const tip_input=document.getElementById('inpperc');
 const peop_input=document.getElementById('inppeop');
-let percent=tip_input.value;
-let people=peop_input.value;
-let pric=document.getElementById('price').value;
+let percent=$('#inpperc').css('value');
+let people=$('#inppeop').css('value');
+let pric=$('#price').css('value');
 
-document.getElementById('addtip').addEventListener('click', function () {
-   let add=parseInt(tip_input.value,10);
+$('#addtip').on('click', function() {
+   let add=parseInt($('#inpperc').css('value'),10);
    if(add<30) 
       add++; 
    else 
       alert('Tip >30%');
-   percent=add+'%';
-   tip_input.value = percent;
+   $('#inpperc').css('value')=add+'%';
+  
    total();
-}, false);
-
-document.getElementById('subtip').addEventListener('click', function () {
-   let sub=parseInt(tip_input.value,10);
+});*/
+/*
+$('#subtip').on('click', function() {
+   let sub=parseInt(percent,10);
    if(sub>5)
       sub--; 
    else 
@@ -25,7 +32,7 @@ document.getElementById('subtip').addEventListener('click', function () {
    percent=sub+'%';
    tip_input.value = percent;
    total();
-}, false);
+});
 
 tip_input.addEventListener('keyup', function (e) {
    if(e.key==='Enter') {
@@ -46,9 +53,9 @@ tip_input.addEventListener('keyup', function (e) {
          total();
       }
    }
-}, false);
+}, false)
 
-/************************************************************************** */
+
 document.querySelector('#addpeop').addEventListener('click', function () {
    let add=Number(peop_input.value);
    if(add<10) 
@@ -69,7 +76,7 @@ document.querySelector('#subpeop').addEventListener('click', function () {
    people=sub;
    peop_input.value = people;
    total();
-}, false);
+}, false)
 
 peop_input.addEventListener('keyup', function (e) {
    if(e.key==='Enter') {
@@ -91,9 +98,9 @@ peop_input.addEventListener('keyup', function (e) {
          total();
       }
    }
-}, false);
+}, false)
 
-/************************************************************************** */
+
 
 document.getElementById('price').addEventListener('keyup', function (e) {
    if(e.key==='Enter') {
@@ -101,9 +108,9 @@ document.getElementById('price').addEventListener('keyup', function (e) {
       document.getElementById('price').blur();
       total();
    }
-}, false);
+}, false)
 
-/************************************************************************** */
+
 
 function total() {
    let total_tip;
@@ -116,6 +123,6 @@ function total() {
    document.getElementById('moneytip').innerHTML='$'+total_tip;
    document.getElementById('moneytotal').innerHTML ='$'+total_total;
 }
-
+*/
    /* total_tip = Math.round((pric*parseInt(percent,10))/people)/100;
    let total_total=Math.round(((total_tip*people + pric)/people)*100)/100;*/

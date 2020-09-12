@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title> Tip Calculator </title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1" />
+        <!--
+            <link rel="stylesheet" href="styles/mycalc.css" /> 
+        -->
+        <link rel="stylesheet" href="styles/tipcalc.css" /> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+     <body>
+         <section id="calc">
+             <form id="inp" class="inpdata">
+                <div class="price LeftGr">
+                     Bill
+                </div>
+                <input id="price" class="LeftGr" type="text" name="price" value="0.00">
+                <div class="percent LeftGr"> 
+                    Tip (5%...30%)
+                </div>
+                <p id="subtip"class="botton LeftGr"> 
+                    -
+                </p> 
+                <input id="inpperc" class="percent LeftGr" type="text" name="percent" value="15%">
+                <p id="addtip" class="botton LeftGr"> 
+                    +
+                </p>
+                <div class="people LeftGr"> 
+                    Number of people (1...10)
+                </div>
+                <p id="subpeop" class="botton LeftGr"> 
+                    -
+                </p>
+                <input id="inppeop" class="people LeftGr" type="text" name="people" value="1">
+                <p id="addpeop" class="botton LeftGr"> 
+                    +
+                </p>                 
+             </form>
+             <div class="outdata">
+                <div id="outtip" class="tip">
+                    Tip<br><span>per person</span>
+                </div>
+                <div id="moneytip" class="tip">
+                    $0.00
+                </div>
+                <div id="tiptotal" class="total">
+                   <b> Total<br><span>per person</span></b>
+                </div>
+                <div id="moneytotal" class="total">
+                    <b> $0.00</b>
+                </div>
+             </div>
+         </section>
+         <script src="js/tipcalcjq.js"></script>
+       </body>
+</html>
