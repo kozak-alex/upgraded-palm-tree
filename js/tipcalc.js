@@ -5,18 +5,18 @@ let percent=tip_input.value;
 let people=peop_input.value;
 let pric=document.getElementById('price').value;
 
-document.getElementById('addtip').addEventListener('click', function () {
+document.getElementById('addtip').addEventListener('click', () => {
    let add=parseInt(tip_input.value,10);
    if(add<30) 
       add++; 
    else 
       alert('Tip >30%');
    percent=add+'%';
-   tip_input.value = percent;
+   tip_input.value = add+'%';
    total();
 }, false);
 
-document.getElementById('subtip').addEventListener('click', function () {
+document.getElementById('subtip').addEventListener('click', () => {
    let sub=parseInt(tip_input.value,10);
    if(sub>5)
       sub--; 
@@ -27,7 +27,7 @@ document.getElementById('subtip').addEventListener('click', function () {
    total();
 }, false);
 
-tip_input.addEventListener('keyup', function (e) {
+tip_input.addEventListener('keyup', e => {
    if(e.key==='Enter') {
       let percent_t = tip_input.value;
       let ent=parseInt(percent_t,10);
@@ -48,8 +48,15 @@ tip_input.addEventListener('keyup', function (e) {
    }
 }, false);
 
+
+tip_input.addEventListener('blur', () => {
+   percent = tip_input.value;
+   tip_input.value += '%';
+   total();
+}, false);
+
 /************************************************************************** */
-document.querySelector('#addpeop').addEventListener('click', function () {
+document.querySelector('#addpeop').addEventListener('click', () => {
    let add=Number(peop_input.value);
    if(add<10) 
       add++; 
@@ -60,7 +67,7 @@ document.querySelector('#addpeop').addEventListener('click', function () {
    total();
  }, false);
 
-document.querySelector('#subpeop').addEventListener('click', function () {
+document.querySelector('#subpeop').addEventListener('click', () => {
    let sub=Number(peop_input.value);
    if(sub>1)
       sub--; 
@@ -71,7 +78,7 @@ document.querySelector('#subpeop').addEventListener('click', function () {
    total();
 }, false);
 
-peop_input.addEventListener('keyup', function (e) {
+peop_input.addEventListener('keyup', e => {
    if(e.key==='Enter') {
       let people_t = peop_input.value;
       let ent=Number(people_t);
@@ -93,14 +100,24 @@ peop_input.addEventListener('keyup', function (e) {
    }
 }, false);
 
+peop_input.addEventListener('blur', () => {
+   people = peop_input.value;
+   total();
+}, false);
+
 /************************************************************************** */
 
-document.getElementById('price').addEventListener('keyup', function (e) {
+document.getElementById('price').addEventListener('keyup', e => {
    if(e.key==='Enter') {
       pric=Number(document.getElementById('price').value);
       document.getElementById('price').blur();
       total();
    }
+}, false);
+
+document.getElementById('price').addEventListener('blur', () => {
+   pric=Number(document.getElementById('price').value);
+   total();
 }, false);
 
 /************************************************************************** */
@@ -116,6 +133,3 @@ function total() {
    document.getElementById('moneytip').innerHTML='$'+total_tip;
    document.getElementById('moneytotal').innerHTML ='$'+total_total;
 }
-
-   /* total_tip = Math.round((pric*parseInt(percent,10))/people)/100;
-   let total_total=Math.round(((total_tip*people + pric)/people)*100)/100;*/
