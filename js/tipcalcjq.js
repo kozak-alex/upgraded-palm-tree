@@ -53,7 +53,8 @@ $( () => {
 
    $('#inpperc').on('focusout', () => {
       percent=$('#inpperc').val();
-      $('#inpperc').val(percent+'%'); 
+      let a=parseInt($('#inpperc').val(),10) + '%';
+      $('#inpperc').val(a); 
       total(); 
    });
 /********************************************/

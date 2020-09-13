@@ -51,7 +51,8 @@ tip_input.addEventListener('keyup', e => {
 
 tip_input.addEventListener('blur', () => {
    percent = tip_input.value;
-   tip_input.value += '%';
+   let a = parseInt(percent,10) + '%';
+   tip_input.value = a;
    total();
 }, false);
 
