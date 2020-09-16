@@ -1,0 +1,54 @@
+#container {
+    display:grid;
+    width: 75%;
+    height: 400px;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 100%;
+    margin: auto;
+}
+
+#inpdata {
+    flex-direction: row;
+    justify-content: center;
+    align-self: stretch;
+    justify-content: center;
+    border:2px solid black;
+    margin: 2px;
+}
+
+
+#outdata {
+    justify-content: center;
+    align-self: stretch;
+    border:2px solid black;
+    margin: 2px;
+}
+
+input {
+    margin:10% ;
+}
+
+select {
+    margin:10% ;
+}
+
+#identification {
+    margin:10% ;
+}
+
+#inpid {
+    width: 150px;
+    height: 20px;
+}
+
+#my_table {
+    text-align: center;
+}
+
+#GetWeather {
+height: 20px;
+}
+
+input#GetID:hover, input#GetWeather:hover {
+    cursor: pointer;
+}

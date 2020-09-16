@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Site</title>
+    <link rel="stylesheet" href="styles/web.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/web.js"></script>
+</head>
+
+<body>
+    <section id="container">
+        <form id="inpdata">
+            <select>
+                <option>  London  </option>
+                <option>  Kiev  </option>
+            </select>
+            <input id="GetID" type="button" name="inpcity" value="View ID">
+            <div id="identification">
+            </div>
+        </form>
+        <form id="outdata">
+            <input id="inpid" type="text" name="inpid" value='' placeholder ="Enter_ID_of_city">
+            <input id="GetWeather" type="button" name="inpcity" value="View Weather">
+            <div class="days">
+                <table id="my_table">
+                    <tr>
+                        <td><img id="icon_day0"></td>
+                        <td><img id="icon_day1"></td>
+                        <td><img id="icon_day2"></td>
+                        <td><img id="icon_day3"></td>
+                        <td><img id="icon_day4"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
