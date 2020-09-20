@@ -11,12 +11,15 @@
 
 <body>
     <section id="container">
-        <form id="inpdata">
+        <form id="inpdata" method="POST" action="web1.html">
             <select>
                 <option>  London  </option>
                 <option>  Kiev  </option>
             </select>
-            <input id="GetID" type="button" name="inpcity" value="View ID">
+            <input type="text" name="inpcity_" value="View ID">
+            <button id="GetID" type="submit" >
+                View ID
+            </button>
             <div id="identification">
             </div>
         </form>
