@@ -20,15 +20,31 @@ app.get('/calc',(req, res, next) => {
 app.post('/web1.html', (req, res, next) => {
    /* res.writeHead(200, {"Content-Type": "text/plain"});*/
    /* res.send('Your form had: \n');*/
+  /* res.setHead('Content-Type', 'application/json');*/
+      
     console.log(req.body);
-    res.end(JSON.stringify(req.body, null, 4)); /**????????????????? */
+    const city= req.body.inpcity;
+    console.log(city);
+
+    fetch(`https://www.metaweather.com/api/location/search/?query=${city}`)
+    .then(response => response.json())
+    .then(json => {
+        const {woeid} = json[0];
+        console.log(woeid);
+
+       /* res.send(`Your form had: ${woeid}`);*/
+       /* res.end(JSON.stringify(woeid, null, 10));  */
+    });
+/*
+    console.log(req.body);
+    res.end(JSON.stringify(req.body, null, 4)); */
 });
 
 app.get('/weather/:woeid', (req, res, next) => {
     fetch(`https://www.metaweather.com/api/location/${req.params.woeid}/`)
     .then(response => response.json())
     .then(json => {
-        const array=[];
+        const array=[];        
         json.consolidated_weather.forEach( element => {
             array.push({
                 temperature: element.the_temp,

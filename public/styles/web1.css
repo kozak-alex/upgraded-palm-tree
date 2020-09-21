@@ -26,9 +26,14 @@
 
 input {
     margin:10% ;
+    width:100px;
 }
 
 select {
+    margin:10% ;
+}
+
+button#GetID {
     margin:10% ;
 }
 
@@ -40,6 +45,6 @@ select {
     width: 150px;
 }
 
-input#GetID:hover {
+button#GetID:hover {
     cursor: pointer;
 }

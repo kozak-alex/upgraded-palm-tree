@@ -18,11 +18,18 @@ $(() => {
 
 });
 
-
 function recive_id_city(city) {
-    const kostil = "https://cors-anywhere.herokuapp.com";
+   /* const kostil = "https://cors-anywhere.herokuapp.com";
     const realServer = `https://www.metaweather.com/api/location/search/?query=${city}`;
-    fetch(`${kostil}/${realServer}`)
+    */
+   /* fetch('/web1.html', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({name:name_input.value, text: text_input.value})
+        })*/
+     fetch(`${kostil}/${realServer}`)
     .then(response => response.json())
     .then(json => {
        const {woeid} = json[0];
