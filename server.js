@@ -3,6 +3,8 @@ const express = require('express');         /* npm install express */
 const bodyParse = require('body-parser');   /* npm install body-parser */
 const fetch = require('node-fetch');   /* npm i node-fetch */
 const { response } = require('express');
+
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.static('public'));
@@ -32,8 +34,8 @@ app.post('/web1.html', (req, res, next) => {
         const {woeid} = json[0];
         console.log(woeid);
 
-       /* res.send(`Your form had: ${woeid}`);*/
-       /* res.end(JSON.stringify(woeid, null, 10));  */
+        res.send(`Your form had: ${woeid}`);
+      /* res.end(JSON.stringify(woeid, null, 10));  */
     });
 /*
     console.log(req.body);
@@ -93,4 +95,4 @@ app.use('/', (err, req, res, next) => {
 
 
 
-app.listen(3000);
+app.listen(PORT);
