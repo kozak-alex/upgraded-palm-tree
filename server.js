@@ -9,7 +9,6 @@ const app = express();
 
 app.use(express.static('public'));
 
-
 app.use(bodyParse.urlencoded({extended:false}));
 app.use(bodyParse.json());
 
@@ -34,7 +33,8 @@ app.post('/web1.html', (req, res, next) => {
         const {woeid} = json[0];
         console.log(woeid);
 
-        res.send(`Your form had: ${woeid}`);
+       /* res.send(`Your form had: ${woeid}`);*/
+        res.sendFile(`${__dirname}/public/calc-grid.html ${woeid}`);
       /* res.end(JSON.stringify(woeid, null, 10));  */
     });
 /*

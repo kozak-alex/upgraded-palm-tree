@@ -1,9 +1,9 @@
-
+const kostil = "https://kozachenko-alex.herokuapp.com/";
 
 $(() => {
-    let sel_city;/* = ($('select').val()).toLowerCase();*/
+    let sel_city;
     $('#GetID').on('click', () => {
-        sel_city = ($('select').val()).toLowerCase();
+        sel_city = ($('.inpcity').val()).toLowerCase();
         console.log(sel_city);
         recive_id_city(sel_city);
     });
@@ -19,9 +19,8 @@ $(() => {
 });
 
 function recive_id_city(city) {
-   /* const kostil = "https://cors-anywhere.herokuapp.com";
-    const realServer = `https://www.metaweather.com/api/location/search/?query=${city}`;
-    */
+     const realServer = `https://www.metaweather.com/api/location/search/?query=${city}`;
+    
    /* fetch('/web1.html', {
         method: 'POST',
         headers: {
@@ -60,14 +59,6 @@ function recive_weather_city(ident) {
         console.error(err);
     });
 }
-
-
-
-let id_city;
-let city; 
-const kostil = "https://cors-anywhere.herokuapp.com";
-const realServer = "`https://www.metaweather.com/api/location/search/?query=";
-const realWeather = "https://www.metaweather.com/api/location/";
 
 
 /*
