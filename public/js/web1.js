@@ -45,14 +45,11 @@ function recive_weather_city(ident) {
     fetch(realWeather)
     .then(response => response.json())
     .then(json => {
-        let temperature;
         let icon_day = $('.icon');
         let temp_day = $('.temp');
         for(let i=0; i<5; i++) {
             icon_day[i].src = json[i].picture ;        
-         
-            temperature = (json[i].temperature).toFixed(2) ;
-            temp_day[i].innerHTML= temperature;
+            temp_day[i].innerHTML= (json[i].temperature).toFixed(2) ;
             /*  $('#my_table tr:nth-child(' + 2 + ')').find('td:nth-child('+(i+1)+')').text(temperature);   */
         }
     })
