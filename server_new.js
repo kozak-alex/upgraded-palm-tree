@@ -9,6 +9,7 @@ const app = express();
 
 app.use(express.static('public'));
 
+
 app.use(bodyParse.urlencoded({extended:false}));
 app.use(bodyParse.json());
 
@@ -49,7 +50,7 @@ app.get('/weather/:woeid', (req, res, next) => {
         json.consolidated_weather.forEach( element => {
             array.push({
                 temperature: element.the_temp,
-                pictute: `https://www.metaweather.com/static/img/weather/png/64/${element.weather_state_abbr}.png`
+                picture: `https://www.metaweather.com/static/img/weather/png/64/${element.weather_state_abbr}.png`
             })
         });
         res.end(JSON.stringify(array, null, 3));

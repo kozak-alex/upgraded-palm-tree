@@ -9,7 +9,6 @@ const app = express();
 
 app.use(express.static('public'));
 
-
 app.use(bodyParse.urlencoded({extended:false}));
 app.use(bodyParse.json());
 
