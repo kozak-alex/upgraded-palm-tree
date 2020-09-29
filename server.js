@@ -41,6 +41,41 @@ app.post('/web1.html', (req, res, next) => {
     res.end(JSON.stringify(req.body, null, 4)); */
 });
 
+/*
+app.post('/web.html', (req, res, next) => {
+
+     console.log(req.body);
+     const city= req.body.inpcity;
+     console.log(city);
+ 
+     fetch(`https://www.metaweather.com/api/location/search/?query=${city}`)
+     .then(response => response.json())
+     .then(json => {
+         const {woeid} = json[0];
+         console.log(woeid);
+ 
+         res.send(`Your form had: ${woeid}`);
+     });
+ });
+
+ */
+
+app.get('/getidcity/:city', (req, res, next) => {
+    fetch(`https://www.metaweather.com/api/location/search/?query=${req.params.city}`)
+    .then(response => response.json())
+    .then(json => {
+        const {woeid} = json[0];
+
+        console.log(woeid);
+        console.log({woeid});
+   /*     res.end(JSON.stringify(woeid, null, 3));
+
+        ${req.params.woeid_11}*/
+
+        res.end(JSON.stringify({woeid}, null, 3));
+    });
+});
+
 app.get('/weather/:woeid', (req, res, next) => {
     fetch(`https://www.metaweather.com/api/location/${req.params.woeid}/`)
     .then(response => response.json())
@@ -55,6 +90,8 @@ app.get('/weather/:woeid', (req, res, next) => {
         res.end(JSON.stringify(array, null, 3));
     });
 });
+
+
 
 /*
 

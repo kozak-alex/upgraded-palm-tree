@@ -22,13 +22,16 @@ $(() => {
 });
 
 function recive_id_city(city) {
-    const kostil = "https://cors-anywhere.herokuapp.com";
-    const realServer = `https://www.metaweather.com/api/location/search/?query=${city}`;
-    fetch(`${kostil}/${realServer}`)
+    const realServer = `/getidcity/${city}`;
+    fetch(realServer)
     .then(response => response.json())
     .then(json => {
-       const {woeid} = json[0];
-       identification.innerHTML = `ID of ${$('select').val()}: ${woeid}`;
+       const woeid = json[0];
+
+    /*    const w_id = woeid;*/
+       console.log(woeid);
+       identification.innerHTML = `ID of ${$('select').val()}:`;
+    /*   identification.innerHTML = `ID of ${$('select').val()}: ${w_id}`;*/
     })
     .catch(err => {
         console.error(err);
@@ -48,7 +51,6 @@ function recive_weather_city(ident) {
          
             temperature = (json.consolidated_weather[i].the_temp).toFixed(2) ;
             temp_day[i].innerHTML= temperature;
-            /*  $('#my_table tr:nth-child(' + 2 + ')').find('td:nth-child('+(i+1)+')').text(temperature);   */
         }
     })
     .catch(err => {
