@@ -64,17 +64,26 @@ app.get('/getidcity/:city', (req, res, next) => {
     fetch(`https://www.metaweather.com/api/location/search/?query=${req.params.city}`)
     .then(response => response.json())
     .then(json => {
-        const {woeid} = json[0];
-
+ /*     const ttl = json[0].title;
+        const wid = json[0].woeid;
+        const rr = {
+            woeid: wid,
+            title: ttl
+        }
         console.log(woeid);
-        console.log({woeid});
-   /*     res.end(JSON.stringify(woeid, null, 3));
-
-        ${req.params.woeid_11}*/
-
+        console.log(ttl);
+        console.log(rr);
+        es.end(JSON.stringify({rr}, null, 3));
+        */
+        const {woeid} = json[0];
+ //       console.log(woeid); 
+ //       console.log({woeid});
+ //       res.end(JSON.stringify(woeid, null, 3)); 
         res.end(JSON.stringify({woeid}, null, 3));
+      
     });
 });
+
 
 app.get('/weather/:woeid', (req, res, next) => {
     fetch(`https://www.metaweather.com/api/location/${req.params.woeid}/`)
@@ -93,8 +102,8 @@ app.get('/weather/:woeid', (req, res, next) => {
 
 
 
-/*
 
+/* OK     first element of array
 app.get('/weather/:woeid', (req, res, next) => {
     fetch(`https://www.metaweather.com/api/location/${req.params.woeid}/`)
     .then(response => response.json())

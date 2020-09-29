@@ -26,12 +26,12 @@ function recive_id_city(city) {
     fetch(realServer)
     .then(response => response.json())
     .then(json => {
-       const woeid = json[0];
-
-    /*    const w_id = woeid;*/
-       console.log(woeid);
-       identification.innerHTML = `ID of ${$('select').val()}:`;
-    /*   identification.innerHTML = `ID of ${$('select').val()}: ${w_id}`;*/
+       const {woeid} = json;               
+ //       const w_id = json.woeid;        /*     res.end(JSON.stringify({woeid}, null, 3));*/
+ /************************           res.end(JSON.stringify(woeid, null, 3));*/
+ //       const woeid = json;       
+ //       console.log(woeid);
+        identification.innerHTML = `ID of ${$('select').val()}: ${woeid}`;
     })
     .catch(err => {
         console.error(err);
