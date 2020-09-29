@@ -92,7 +92,10 @@ app.get('/weather/:woeid', (req, res, next) => {
         const array=[];        
         json.consolidated_weather.forEach( element => {
             array.push({
+                date: element.applicable_date,
                 temperature: element.the_temp,
+                maxTemperature: element.max_temp,
+                minTemperature: element.min_temp,
                 picture: `https://www.metaweather.com/static/img/weather/png/64/${element.weather_state_abbr}.png`
             })
         });

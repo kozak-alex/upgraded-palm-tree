@@ -42,12 +42,18 @@ function recive_weather_city(ident) {
     fetch(realWeather)
     .then(response => response.json())
     .then(json => {
-        let temperature;
+        let date_day = $('.date');
         let icon_day = $('.icon');
-        let temp_day = $('.temp');
+        let tmax_day = $('.t_max');
+        let tmin_day = $('.t_min');
+        let wthdate;
         for(let i=0; i<5; i++) {
+            wthdate = converter(json[i].date);
+//            console.log(wthdate);
+            date_day[i].innerHTML= wthdate;     //json[i].date;
             icon_day[i].src = json[i].picture ;        
-            temp_day[i].innerHTML= (json[i].temperature).toFixed(2) ;
+            tmax_day[i].innerHTML= " Max:"+(json[i].maxTemperature).toFixed(1)+"&deg;C " ;
+            tmin_day[i].innerHTML= " Min:"+(json[i].minTemperature).toFixed(1)+"&deg;C " ;
         }
     })
     .catch(err => {
@@ -55,4 +61,16 @@ function recive_weather_city(ident) {
     });
 }
 
+function converter(day) {
+    let array;
+    let str;
+    array = day.split('-');
+    str = array[2] + " " + month(array[1]);
+    return str;
+}
+
+function month(mon) {
+    let str_month = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    return str_month[Number(mon)];
+}
 
