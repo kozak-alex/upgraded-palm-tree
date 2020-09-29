@@ -6,18 +6,19 @@ const realServer = "`https://www.metaweather.com/api/location/search/?query=";
 const realWeather = "https://www.metaweather.com/api/location/";
 
 $(() => {
-    let sel_city;
-    $('#GetID').on('click', () => {
-        sel_city = ($('select').val()).toLowerCase();
-        console.log(sel_city);
-        recive_id_city(sel_city);
-    });
+//    let sel_city;
+//    $('#GetID').on('click', () => {
+//        sel_city = ($('select').val()).toLowerCase();
+//        console.log(sel_city);
+//        recive_id_city(sel_city);
+//    });
 
-    let id_city;
-     $('#GetWeather').on('click', () => {
-         id_city = $('#inpid').val();
-         console.log(id_city);
-         recive_weather_city(id_city);
+//    let id_city;
+    let sel_city;    
+    $('#GetWeather').on('click', () => {
+        sel_city = ($('select').val()).toLowerCase();
+//        id_city = $('#inpid').val();
+        recive_id_city(sel_city);
     });
 });
 
@@ -27,22 +28,21 @@ function recive_id_city(city) {
     .then(response => response.json())
     .then(json => {
        const {woeid} = json;               
- //       const w_id = json.woeid;        /*     res.end(JSON.stringify({woeid}, null, 3));*/
- /************************           res.end(JSON.stringify(woeid, null, 3));*/
- //       const woeid = json;       
- //       console.log(woeid);
-        identification.innerHTML = `ID of ${$('select').val()}: ${woeid}`;
+//       identification.innerHTML = `ID of ${$('select').val()}: ${woeid}`;
+        console.log(woeid);
+        recive_weather_city(woeid);
     })
     .catch(err => {
         console.error(err);
     });
-}
+}       
 
 function recive_weather_city(ident) {
     const realWeather = `/weather/${ident}`;
     fetch(realWeather)
     .then(response => response.json())
     .then(json => {
+        let temperature;
         let icon_day = $('.icon');
         let temp_day = $('.temp');
         for(let i=0; i<5; i++) {
